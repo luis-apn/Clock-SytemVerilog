@@ -3,27 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -2.881
-TNS   : -48.564
+Slack : -2.741
+TNS   : -47.275
 
 Type  : Slow Model Setup 'div_clk:base_clk|clock_out'
-Slack : -1.452
-TNS   : -16.853
+Slack : -1.241
+TNS   : -5.383
+
+Type  : Slow Model Setup 'second_counter:sec_inst|sec_carry'
+Slack : -1.142
+TNS   : -7.734
 
 Type  : Slow Model Setup 'minute_counter:min_inst|carry_min'
-Slack : -1.142
-TNS   : -5.710
+Slack : -1.114
+TNS   : -5.570
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.525
-TNS   : -2.525
+Slack : -2.552
+TNS   : -2.552
 
-Type  : Slow Model Hold 'div_clk:base_clk|clock_out'
-Slack : -2.331
-TNS   : -2.331
+Type  : Slow Model Hold 'second_counter:sec_inst|sec_carry'
+Slack : 0.730
+TNS   : 0.000
 
 Type  : Slow Model Hold 'minute_counter:min_inst|carry_min'
-Slack : 0.802
+Slack : 0.809
+TNS   : 0.000
+
+Type  : Slow Model Hold 'div_clk:base_clk|clock_out'
+Slack : 0.813
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
@@ -32,34 +40,46 @@ TNS   : -28.380
 
 Type  : Slow Model Minimum Pulse Width 'div_clk:base_clk|clock_out'
 Slack : -0.500
-TNS   : -13.000
+TNS   : -7.000
+
+Type  : Slow Model Minimum Pulse Width 'second_counter:sec_inst|sec_carry'
+Slack : -0.500
+TNS   : -7.000
 
 Type  : Slow Model Minimum Pulse Width 'minute_counter:min_inst|carry_min'
 Slack : -0.500
 TNS   : -5.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -0.835
-TNS   : -10.159
+Slack : -0.775
+TNS   : -9.492
 
-Type  : Fast Model Setup 'div_clk:base_clk|clock_out'
-Slack : -0.182
-TNS   : -1.260
+Type  : Fast Model Setup 'second_counter:sec_inst|sec_carry'
+Slack : -0.025
+TNS   : -0.150
 
 Type  : Fast Model Setup 'minute_counter:min_inst|carry_min'
-Slack : -0.022
-TNS   : -0.110
+Slack : -0.012
+TNS   : -0.060
+
+Type  : Fast Model Setup 'div_clk:base_clk|clock_out'
+Slack : -0.003
+TNS   : -0.003
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.569
-TNS   : -1.569
+Slack : -1.592
+TNS   : -1.592
+
+Type  : Fast Model Hold 'second_counter:sec_inst|sec_carry'
+Slack : 0.332
+TNS   : 0.000
 
 Type  : Fast Model Hold 'div_clk:base_clk|clock_out'
-Slack : -1.416
-TNS   : -1.416
+Slack : 0.363
+TNS   : 0.000
 
 Type  : Fast Model Hold 'minute_counter:min_inst|carry_min'
-Slack : 0.358
+Slack : 0.363
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
@@ -68,7 +88,11 @@ TNS   : -28.380
 
 Type  : Fast Model Minimum Pulse Width 'div_clk:base_clk|clock_out'
 Slack : -0.500
-TNS   : -13.000
+TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 'second_counter:sec_inst|sec_carry'
+Slack : -0.500
+TNS   : -7.000
 
 Type  : Fast Model Minimum Pulse Width 'minute_counter:min_inst|carry_min'
 Slack : -0.500

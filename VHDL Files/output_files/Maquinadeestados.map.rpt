@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquinadeestados
-Thu Oct 10 16:32:30 2024
+Fri Oct 11 11:21:52 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,15 +14,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
- 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -48,15 +49,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 10 16:32:30 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 11 11:21:52 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquinadeestados                                ;
 ; Top-level Entity Name              ; top_module                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 275                                             ;
-;     Total combinational functions  ; 275                                             ;
-;     Dedicated logic registers      ; 45                                              ;
-; Total registers                    ; 45                                              ;
+; Total logic elements               ; 276                                             ;
+;     Total combinational functions  ; 276                                             ;
+;     Dedicated logic registers      ; 46                                              ;
+; Total registers                    ; 46                                              ;
 ; Total pins                         ; 44                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -161,30 +162,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; top_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/top_module.sv              ;         ;
-; second_counter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/second_counter.sv          ;         ;
-; minute_counter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/minute_counter.sv          ;         ;
-; hour_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/hour_counter.sv            ;         ;
-; seven_segment_decoder.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/seven_segment_decoder.sv   ;         ;
-; div_clk.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/div_clk.sv                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                    ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                   ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                               ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                    ;         ;
-; db/lpm_divide_25m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/lpm_divide_25m.tdf      ;         ;
-; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/sign_div_unsign_9kh.tdf ;         ;
-; db/alt_u_div_l0f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/alt_u_div_l0f.tdf       ;         ;
-; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/lpm_divide_vcm.tdf      ;         ;
-; db/lpm_divide_15m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/lpm_divide_15m.tdf      ;         ;
-; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/sign_div_unsign_8kh.tdf ;         ;
-; db/alt_u_div_j0f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/alt_u_div_j0f.tdf       ;         ;
-; db/lpm_divide_ucm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/db/lpm_divide_ucm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; top_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/top_module.sv              ;         ;
+; second_counter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/second_counter.sv          ;         ;
+; minute_counter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/minute_counter.sv          ;         ;
+; hour_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/hour_counter.sv            ;         ;
+; seven_segment_decoder.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/seven_segment_decoder.sv   ;         ;
+; div_clk.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/div_clk.sv                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                             ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                  ;         ;
+; db/lpm_divide_25m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/lpm_divide_25m.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_l0f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/alt_u_div_l0f.tdf       ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/lpm_divide_vcm.tdf      ;         ;
+; db/lpm_divide_15m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/lpm_divide_15m.tdf      ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/sign_div_unsign_8kh.tdf ;         ;
+; db/alt_u_div_j0f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/alt_u_div_j0f.tdf       ;         ;
+; db/lpm_divide_ucm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/luisa/OneDrive/햞ea de Trabalho/Clock-SytemVerilog/VHDL Files/db/lpm_divide_ucm.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -192,28 +193,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 275   ;
+; Estimated Total logic elements              ; 276   ;
 ;                                             ;       ;
-; Total combinational functions               ; 275   ;
+; Total combinational functions               ; 276   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 49    ;
-;     -- 3 input functions                    ; 60    ;
+;     -- 4 input functions                    ; 51    ;
+;     -- 3 input functions                    ; 59    ;
 ;     -- <=2 input functions                  ; 166   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 178   ;
+;     -- normal mode                          ; 179   ;
 ;     -- arithmetic mode                      ; 97    ;
 ;                                             ;       ;
-; Total registers                             ; 45    ;
-;     -- Dedicated logic registers            ; 45    ;
+; Total registers                             ; 46    ;
+;     -- Dedicated logic registers            ; 46    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 44    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 27    ;
-; Total fan-out                               ; 826   ;
-; Average fan-out                             ; 2.27  ;
+; Total fan-out                               ; 828   ;
+; Average fan-out                             ; 2.26  ;
 +---------------------------------------------+-------+
 
 
@@ -222,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |top_module                              ; 275 (0)           ; 45 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |top_module                                                                                                 ; work         ;
+; |top_module                              ; 276 (0)           ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |top_module                                                                                                 ; work         ;
 ;    |div_clk:base_clk|                    ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|div_clk:base_clk                                                                                ; work         ;
 ;    |hour_counter:hour_inst|              ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|hour_counter:hour_inst                                                                          ; work         ;
 ;    |lpm_divide:Div0|                     ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0                                                                                 ; work         ;
@@ -249,8 +250,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |lpm_divide_15m:auto_generated|    ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod2|lpm_divide_15m:auto_generated                                                   ; work         ;
 ;          |sign_div_unsign_8kh:divider|   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
 ;             |alt_u_div_j0f:divider|      ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_j0f:divider ; work         ;
-;    |minute_counter:min_inst|             ; 10 (10)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|minute_counter:min_inst                                                                         ; work         ;
-;    |second_counter:sec_inst|             ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|second_counter:sec_inst                                                                         ; work         ;
+;    |minute_counter:min_inst|             ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|minute_counter:min_inst                                                                         ; work         ;
+;    |second_counter:sec_inst|             ; 12 (12)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|second_counter:sec_inst                                                                         ; work         ;
 ;    |seven_segment_decoder:hour_ones_dec| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:hour_ones_dec                                                             ; work         ;
 ;    |seven_segment_decoder:hour_tens_dec| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:hour_tens_dec                                                             ; work         ;
 ;    |seven_segment_decoder:min_ones_dec|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:min_ones_dec                                                              ; work         ;
@@ -266,14 +267,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 45    ;
-; Number of registers using Synchronous Clear  ; 17    ;
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 7     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 6     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; second_counter:sec_inst|sec_carry      ; 7       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -281,9 +292,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_module|second_counter:sec_inst|sec[5] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_module|minute_counter:min_inst|min[5] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_module|hour_counter:hour_inst|hour[4] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_module|minute_counter:min_inst|min[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -440,7 +450,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 10 16:32:28 2024
+    Info: Processing started: Fri Oct 11 11:21:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquinadeestados -c Maquinadeestados
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
@@ -456,15 +466,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
 Info (12021): Found 1 design units, including 1 entities, in source file div_clk.sv
     Info (12023): Found entity 1: div_clk
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top_module.sv(29): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(30): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(31): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(32): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(33): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(34): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at top_module.sv(35): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "div_clk" for hierarchy "div_clk:base_clk"
 Info (12128): Elaborating entity "second_counter" for hierarchy "second_counter:sec_inst"
-Warning (10230): Verilog HDL assignment warning at second_counter.sv(15): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at second_counter.sv(20): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "minute_counter" for hierarchy "minute_counter:min_inst"
 Warning (10230): Verilog HDL assignment warning at minute_counter.sv(19): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "hour_counter" for hierarchy "hour_counter:hour_inst"
@@ -517,18 +527,20 @@ Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following par
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ucm.tdf
     Info (12023): Found entity 1: lpm_divide_ucm
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_hour_tens[1]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 319 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 275 logic cells
+    Info (21061): Implemented 277 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4609 megabytes
-    Info: Processing ended: Thu Oct 10 16:32:30 2024
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4621 megabytes
+    Info: Processing ended: Fri Oct 11 11:21:52 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

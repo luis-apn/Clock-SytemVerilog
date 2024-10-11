@@ -7,7 +7,7 @@ module minute_counter (
 	 output logic carry_min
 );
 
-    always_ff @(posedge clk ) begin
+    always_ff @(posedge /*clk*/ sec_carry)begin //-> nesta linha foi adcionado o sec_carry para deixar no mesmo padrao tanto o minuto quanto o segundo
         if (!reset) begin
 				carry_min <= 1;
             min <= 6'd0;
@@ -21,4 +21,7 @@ module minute_counter (
             end
         end
     end
+	 
+
+
 endmodule

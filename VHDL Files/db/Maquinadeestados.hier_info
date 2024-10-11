@@ -78,34 +78,31 @@ clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|second_counter:sec_inst
+clk => sec_carry~reg0.CLK
 clk => sec[0]~reg0.CLK
 clk => sec[1]~reg0.CLK
 clk => sec[2]~reg0.CLK
 clk => sec[3]~reg0.CLK
 clk => sec[4]~reg0.CLK
 clk => sec[5]~reg0.CLK
-reset => sec.OUTPUTSELECT
-reset => sec.OUTPUTSELECT
-reset => sec.OUTPUTSELECT
-reset => sec.OUTPUTSELECT
-reset => sec.OUTPUTSELECT
-reset => sec.OUTPUTSELECT
+reset => sec_carry~reg0.PRESET
+reset => sec[0]~reg0.ACLR
+reset => sec[1]~reg0.ACLR
+reset => sec[2]~reg0.ACLR
+reset => sec[3]~reg0.ACLR
+reset => sec[4]~reg0.ACLR
+reset => sec[5]~reg0.ACLR
 sec[0] <= sec[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[1] <= sec[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[2] <= sec[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[3] <= sec[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[4] <= sec[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[5] <= sec[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec_carry <= sec_carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|minute_counter:min_inst
-clk => min[0]~reg0.CLK
-clk => min[1]~reg0.CLK
-clk => min[2]~reg0.CLK
-clk => min[3]~reg0.CLK
-clk => min[4]~reg0.CLK
-clk => min[5]~reg0.CLK
-clk => carry_min~reg0.CLK
+clk => ~NO_FANOUT~
 reset => carry_min.OUTPUTSELECT
 reset => min.OUTPUTSELECT
 reset => min.OUTPUTSELECT
@@ -113,13 +110,13 @@ reset => min.OUTPUTSELECT
 reset => min.OUTPUTSELECT
 reset => min.OUTPUTSELECT
 reset => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => min.OUTPUTSELECT
-sec_carry => carry_min.OUTPUTSELECT
+sec_carry => min[0]~reg0.CLK
+sec_carry => min[1]~reg0.CLK
+sec_carry => min[2]~reg0.CLK
+sec_carry => min[3]~reg0.CLK
+sec_carry => min[4]~reg0.CLK
+sec_carry => min[5]~reg0.CLK
+sec_carry => carry_min~reg0.CLK
 min[0] <= min[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 min[1] <= min[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 min[2] <= min[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

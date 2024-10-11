@@ -15,10 +15,11 @@ module top_module (
     logic [4:0] hour;
 	 logic clock;
 	 logic carry_min;
+	 logic carry_sec;
     // Instancia o contador de segundos, minutos e horas
 	 div_clk base_clk(.reset(reset), .clock(clk), .clock_out(clock));
-    second_counter sec_inst (.clk(clock), .reset(reset), .sec(sec));
-    minute_counter min_inst (.clk(clock), .reset(reset), .sec_carry(sec == 6'd59), .min(min), .carry_min(carry_min));
+    second_counter sec_inst (.clk(clock), .reset(reset), .sec(sec), .sec_carry(carry_sec));
+    minute_counter min_inst (.clk(clock), .reset(reset), .sec_carry(carry_sec), .min(min), .carry_min(carry_min));
     hour_counter hour_inst (.clk(clock), .reset(reset), .min_carry(carry_min), .hour(hour));
 
     // Extrai dígitos de unidade e dezena para cada valor
