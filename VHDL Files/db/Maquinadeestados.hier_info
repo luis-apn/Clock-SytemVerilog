@@ -1,0 +1,234 @@
+|top_module
+clk => clk.IN1
+reset => reset.IN4
+seg_sec_ones[0] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[1] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[2] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[3] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[4] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[5] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_ones[6] <= seven_segment_decoder:sec_ones_dec.segments
+seg_sec_tens[0] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[1] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[2] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[3] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[4] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[5] <= seven_segment_decoder:sec_tens_dec.segments
+seg_sec_tens[6] <= seven_segment_decoder:sec_tens_dec.segments
+seg_min_ones[0] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[1] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[2] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[3] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[4] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[5] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_ones[6] <= seven_segment_decoder:min_ones_dec.segments
+seg_min_tens[0] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[1] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[2] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[3] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[4] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[5] <= seven_segment_decoder:min_tens_dec.segments
+seg_min_tens[6] <= seven_segment_decoder:min_tens_dec.segments
+seg_hour_ones[0] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[1] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[2] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[3] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[4] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[5] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_ones[6] <= seven_segment_decoder:hour_ones_dec.segments
+seg_hour_tens[0] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[1] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[2] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[3] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[4] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[5] <= seven_segment_decoder:hour_tens_dec.segments
+seg_hour_tens[6] <= seven_segment_decoder:hour_tens_dec.segments
+
+
+|top_module|div_clk:base_clk
+reset => ~NO_FANOUT~
+clock => clock_out~reg0.CLK
+clock => cont[0].CLK
+clock => cont[1].CLK
+clock => cont[2].CLK
+clock => cont[3].CLK
+clock => cont[4].CLK
+clock => cont[5].CLK
+clock => cont[6].CLK
+clock => cont[7].CLK
+clock => cont[8].CLK
+clock => cont[9].CLK
+clock => cont[10].CLK
+clock => cont[11].CLK
+clock => cont[12].CLK
+clock => cont[13].CLK
+clock => cont[14].CLK
+clock => cont[15].CLK
+clock => cont[16].CLK
+clock => cont[17].CLK
+clock => cont[18].CLK
+clock => cont[19].CLK
+clock => cont[20].CLK
+clock => cont[21].CLK
+clock => cont[22].CLK
+clock => cont[23].CLK
+clock => cont[24].CLK
+clock => cont[25].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|second_counter:sec_inst
+clk => sec[0]~reg0.CLK
+clk => sec[1]~reg0.CLK
+clk => sec[2]~reg0.CLK
+clk => sec[3]~reg0.CLK
+clk => sec[4]~reg0.CLK
+clk => sec[5]~reg0.CLK
+reset => sec.OUTPUTSELECT
+reset => sec.OUTPUTSELECT
+reset => sec.OUTPUTSELECT
+reset => sec.OUTPUTSELECT
+reset => sec.OUTPUTSELECT
+reset => sec.OUTPUTSELECT
+sec[0] <= sec[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec[1] <= sec[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec[2] <= sec[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec[3] <= sec[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec[4] <= sec[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec[5] <= sec[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|minute_counter:min_inst
+clk => min[0]~reg0.CLK
+clk => min[1]~reg0.CLK
+clk => min[2]~reg0.CLK
+clk => min[3]~reg0.CLK
+clk => min[4]~reg0.CLK
+clk => min[5]~reg0.CLK
+clk => carry_min~reg0.CLK
+reset => carry_min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+reset => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => min.OUTPUTSELECT
+sec_carry => carry_min.OUTPUTSELECT
+min[0] <= min[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min[3] <= min[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min[4] <= min[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min[5] <= min[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry_min <= carry_min~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|hour_counter:hour_inst
+clk => ~NO_FANOUT~
+reset => hour.OUTPUTSELECT
+reset => hour.OUTPUTSELECT
+reset => hour.OUTPUTSELECT
+reset => hour.OUTPUTSELECT
+reset => hour.OUTPUTSELECT
+min_carry => hour[0]~reg0.CLK
+min_carry => hour[1]~reg0.CLK
+min_carry => hour[2]~reg0.CLK
+min_carry => hour[3]~reg0.CLK
+min_carry => hour[4]~reg0.CLK
+hour[0] <= hour[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[1] <= hour[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[2] <= hour[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[3] <= hour[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[4] <= hour[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:sec_ones_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:sec_tens_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:min_ones_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:min_tens_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:hour_ones_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|seven_segment_decoder:hour_tens_dec
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

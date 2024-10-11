@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\luisa\OneDrive\Área de Trabalho\teste3\simulation\qsim
+vtop_module
+Z1 !s100 S6[NhN]j8fLRaP<G?S5Pk2
+Z2 IcddFJ]4Y<;9@>549ij;`K1
+Z3 VS3HS0KP=@CNLLO?][:8OK2
+Z4 dC:\Users\luisa\OneDrive\Área de Trabalho\teste3\simulation\qsim
+Z5 w1728506055
+Z6 8Maquinadeestados.vo
+Z7 FMaquinadeestados.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Maquinadeestados.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1728506056.300000
+Z12 !s107 Maquinadeestados.vo|
+!s101 -O0
+vtop_module_vlg_check_tst
+!i10b 1
+Z13 !s100 Dh?TJ]lCdUlCN;QjX?@`d3
+Z14 ISAOBYz`WFF@kZlT_aXNDM2
+Z15 Ve[TAPhe29^DQ_ED3kGN671
+R4
+Z16 w1728506054
+Z17 8Maquinadeestados.vt
+Z18 FMaquinadeestados.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1728506056.400000
+Z20 !s107 Maquinadeestados.vt|
+Z21 !s90 -work|work|Maquinadeestados.vt|
+!s101 -O0
+R10
+vtop_module_vlg_sample_tst
+!i10b 1
+Z22 !s100 nH>[Qi]Wbl7nAB]O^SOA?2
+Z23 I4]jd:[D1f4BanF2zR4<MX2
+Z24 V[c4ZR1zI<d9W?H1k>d>Y91
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vtop_module_vlg_vec_tst
+!i10b 1
+!s100 A<PT6KVQFL6QDj4PIoQQm0
+IC]hffNODgX6NMAFn`HXIR0
+Z25 V@X@`LbbZn]NJ=oUzV>iWb1
+R4
+R16
+R17
+R18
+Z26 L0 931
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

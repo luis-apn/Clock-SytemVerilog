@@ -1,0 +1,20 @@
+// minute_counter.sv - Contador de minutos
+module minute_counter (
+    input logic clk,
+    input logic reset,
+    input logic sec_carry,
+    output logic [5:0] min
+);
+
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            min <= 6'd0;
+        end else if (sec_carry) begin
+            if (min == 6'd59) begin
+                min <= 6'd0;
+            end else begin
+                min <= min + 1;
+            end
+        end
+    end
+endmodule
