@@ -16,11 +16,13 @@ module top_module (
 	 logic clock;
 	 logic carry_min;
 	 logic carry_sec;
+	 logic reset_all;
+	 
     // Instancia o contador de segundos, minutos e horas
 	 div_clk base_clk(.reset(reset), .clock(clk), .clock_out(clock));
-    second_counter sec_inst (.clk(clock), .reset(reset), .sec(sec), .sec_carry(carry_sec));
-    minute_counter min_inst (.clk(clock), .reset(reset), .sec_carry(carry_sec), .min(min), .carry_min(carry_min));
-    hour_counter hour_inst (.clk(clock), .reset(reset), .min_carry(carry_min), .hour(hour));
+    second_counter sec_inst (.clk(clock), .reset(reset), .sec(sec), .sec_carry(carry_sec), .reset_all(reset_all));
+    minute_counter min_inst (.clk(clock), .reset_all(reset_all), .sec_carry(carry_sec), .min(min), .carry_min(carry_min));
+    hour_counter hour_inst (.clk(clock), .reset_all(reset_all), .min_carry(carry_min), .hour(hour));
 
     // Extrai dígitos de unidade e dezena para cada valor
     logic [3:0] sec_ones, sec_tens;

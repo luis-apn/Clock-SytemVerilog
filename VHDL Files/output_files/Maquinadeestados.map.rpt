@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquinadeestados
-Fri Oct 11 11:21:52 2024
+Mon Oct 14 09:11:47 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -49,15 +49,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 11 11:21:52 2024           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 14 09:11:47 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquinadeestados                                ;
 ; Top-level Entity Name              ; top_module                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 276                                             ;
+; Total logic elements               ; 277                                             ;
 ;     Total combinational functions  ; 276                                             ;
-;     Dedicated logic registers      ; 46                                              ;
-; Total registers                    ; 46                                              ;
+;     Dedicated logic registers      ; 47                                              ;
+; Total registers                    ; 47                                              ;
 ; Total pins                         ; 44                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -193,7 +193,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 276   ;
+; Estimated Total logic elements              ; 277   ;
 ;                                             ;       ;
 ; Total combinational functions               ; 276   ;
 ; Logic element usage by number of LUT inputs ;       ;
@@ -205,15 +205,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- normal mode                          ; 179   ;
 ;     -- arithmetic mode                      ; 97    ;
 ;                                             ;       ;
-; Total registers                             ; 46    ;
-;     -- Dedicated logic registers            ; 46    ;
+; Total registers                             ; 47    ;
+;     -- Dedicated logic registers            ; 47    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 44    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 27    ;
-; Total fan-out                               ; 828   ;
+; Total fan-out                               ; 830   ;
 ; Average fan-out                             ; 2.26  ;
 +---------------------------------------------+-------+
 
@@ -223,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |top_module                              ; 276 (0)           ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |top_module                                                                                                 ; work         ;
+; |top_module                              ; 276 (0)           ; 47 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |top_module                                                                                                 ; work         ;
 ;    |div_clk:base_clk|                    ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|div_clk:base_clk                                                                                ; work         ;
 ;    |hour_counter:hour_inst|              ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|hour_counter:hour_inst                                                                          ; work         ;
 ;    |lpm_divide:Div0|                     ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0                                                                                 ; work         ;
@@ -251,7 +251,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |sign_div_unsign_8kh:divider|   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
 ;             |alt_u_div_j0f:divider|      ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_j0f:divider ; work         ;
 ;    |minute_counter:min_inst|             ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|minute_counter:min_inst                                                                         ; work         ;
-;    |second_counter:sec_inst|             ; 12 (12)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|second_counter:sec_inst                                                                         ; work         ;
+;    |second_counter:sec_inst|             ; 12 (12)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|second_counter:sec_inst                                                                         ; work         ;
 ;    |seven_segment_decoder:hour_ones_dec| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:hour_ones_dec                                                             ; work         ;
 ;    |seven_segment_decoder:hour_tens_dec| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:hour_tens_dec                                                             ; work         ;
 ;    |seven_segment_decoder:min_ones_dec|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|seven_segment_decoder:min_ones_dec                                                              ; work         ;
@@ -267,10 +267,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
+; Total registers                              ; 47    ;
 ; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -283,7 +283,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; second_counter:sec_inst|sec_carry      ; 7       ;
-; Total number of inverted registers = 1 ;         ;
+; second_counter:sec_inst|reset_all      ; 2       ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
@@ -440,7 +441,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -450,7 +451,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 11 11:21:51 2024
+    Info: Processing started: Mon Oct 14 09:11:43 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquinadeestados -c Maquinadeestados
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
@@ -466,15 +467,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
 Info (12021): Found 1 design units, including 1 entities, in source file div_clk.sv
     Info (12023): Found entity 1: div_clk
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top_module.sv(30): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at top_module.sv(31): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(32): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(33): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(34): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at top_module.sv(35): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at top_module.sv(36): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at top_module.sv(37): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "div_clk" for hierarchy "div_clk:base_clk"
 Info (12128): Elaborating entity "second_counter" for hierarchy "second_counter:sec_inst"
-Warning (10230): Verilog HDL assignment warning at second_counter.sv(20): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at second_counter.sv(23): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "minute_counter" for hierarchy "minute_counter:min_inst"
 Warning (10230): Verilog HDL assignment warning at minute_counter.sv(19): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "hour_counter" for hierarchy "hour_counter:hour_inst"
@@ -533,14 +534,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_hour_tens[1]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 322 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 277 logic cells
+    Info (21061): Implemented 278 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4621 megabytes
-    Info: Processing ended: Fri Oct 11 11:21:52 2024
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4610 megabytes
+    Info: Processing ended: Mon Oct 14 09:11:47 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

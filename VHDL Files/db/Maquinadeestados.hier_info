@@ -1,6 +1,6 @@
 |top_module
 clk => clk.IN1
-reset => reset.IN4
+reset => reset.IN2
 seg_sec_ones[0] <= seven_segment_decoder:sec_ones_dec.segments
 seg_sec_ones[1] <= seven_segment_decoder:sec_ones_dec.segments
 seg_sec_ones[2] <= seven_segment_decoder:sec_ones_dec.segments
@@ -78,6 +78,7 @@ clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|second_counter:sec_inst
+clk => reset_all~reg0.CLK
 clk => sec_carry~reg0.CLK
 clk => sec[0]~reg0.CLK
 clk => sec[1]~reg0.CLK
@@ -85,6 +86,7 @@ clk => sec[2]~reg0.CLK
 clk => sec[3]~reg0.CLK
 clk => sec[4]~reg0.CLK
 clk => sec[5]~reg0.CLK
+reset => reset_all~reg0.PRESET
 reset => sec_carry~reg0.PRESET
 reset => sec[0]~reg0.ACLR
 reset => sec[1]~reg0.ACLR
@@ -99,17 +101,18 @@ sec[3] <= sec[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[4] <= sec[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec[5] <= sec[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sec_carry <= sec_carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset_all <= reset_all~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|minute_counter:min_inst
 clk => ~NO_FANOUT~
-reset => carry_min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
-reset => min.OUTPUTSELECT
+reset_all => carry_min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
+reset_all => min.OUTPUTSELECT
 sec_carry => min[0]~reg0.CLK
 sec_carry => min[1]~reg0.CLK
 sec_carry => min[2]~reg0.CLK
@@ -128,11 +131,11 @@ carry_min <= carry_min~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |top_module|hour_counter:hour_inst
 clk => ~NO_FANOUT~
-reset => hour.OUTPUTSELECT
-reset => hour.OUTPUTSELECT
-reset => hour.OUTPUTSELECT
-reset => hour.OUTPUTSELECT
-reset => hour.OUTPUTSELECT
+reset_all => hour.OUTPUTSELECT
+reset_all => hour.OUTPUTSELECT
+reset_all => hour.OUTPUTSELECT
+reset_all => hour.OUTPUTSELECT
+reset_all => hour.OUTPUTSELECT
 min_carry => hour[0]~reg0.CLK
 min_carry => hour[1]~reg0.CLK
 min_carry => hour[2]~reg0.CLK

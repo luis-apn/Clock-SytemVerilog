@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/luisa/OneDrive/Área de Trabalho/Projeto 2 - CL2/Projeto 2 - CL2/output_files/") File("Maquinadeestados.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/luisa/OneDrive/Área de Trabalho/Clock-SytemVerilog/VHDL Files/output_files/") File("Maquinadeestados.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
